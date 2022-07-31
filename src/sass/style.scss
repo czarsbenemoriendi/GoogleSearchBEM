@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 70vh;
+}
+body {
+	font-size: 1rem;
+	font-family: arial, sans-serif;
+}
+.nav {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: 17px;
+	&__link {
+		font-size: 0.8em;
+		text-decoration: none;
+		color: hsl(0, 0%, 0%);
+	}
+	&__link:hover {
+		text-decoration: underline;
+	}
+
+	&__btn {
+		width: 40px;
+		height: 40px;
+		border: transparent;
+		background: transparent;
+		cursor: pointer;
+	}
+	&__btn:hover {
+		border-radius: 50%;
+		background-color: hsl(0, 0%, 87%);
+	}
+	&__dots {
+		position: relative;
+		top: -10px;
+		display: flex;
+		flex-direction: column;
+	}
+	.fa-ellipsis {
+		position: relative;
+		top: 0;
+		height: 6px;
+		width: 100%;
+		font-size: 23px;
+	}
+	.first-letter {
+		font-size: 1.6rem;
+		width: 30px;
+		height: 30px;
+		background-color: hsl(219, 99%, 65%);
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+}
+.header {
+	display: flex;
+	justify-content: center;
+	&__img {
+		width: 17rem;
+	}
+}
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	&__input {
+		width: 80%;
+		height: 40px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		border-radius: 20px;
+		border: 1px solid hsl(0, 0%, 87%);
+		outline: none;
+		padding-left: 50px;
+	}
+	&__input:hover,
+	&__input:focus {
+		box-shadow: 0 0 10px 2px hsl(0, 0%, 87%);
+		cursor: text;
+	}
+	&__magnifyingGlass {
+		position: absolute;
+		top: 43px;
+		left: 70px;
+		opacity: 0.5;
+	}
+	&__btnKeyboard {
+		position: absolute;
+		top: 40px;
+		right: 70px;
+		// &__icon {
+			
+		// }
+	}
+}
