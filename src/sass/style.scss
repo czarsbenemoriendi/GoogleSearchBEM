@@ -6,14 +6,21 @@
 	margin: 0;
 }
 html {
+	height: 100vh;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 70vh;
+	justify-content: flex-end;
+	flex-direction: column;
 }
 body {
 	font-size: 1rem;
 	font-family: arial, sans-serif;
+}
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 80vh;
 }
 .nav {
 	position: fixed;
@@ -58,12 +65,15 @@ body {
 		font-size: 23px;
 	}
 	.first-letter {
-		font-size: 1.6rem;
 		width: 30px;
 		height: 30px;
+		line-height: 30px;
+		font-size: 1.2rem;
 		background-color: hsl(219, 99%, 65%);
 		border-radius: 50%;
 		margin: 0 auto;
+		color: white;
+		font-weight: 300;
 	}
 }
 .header {
@@ -80,7 +90,7 @@ body {
 	flex-direction: column;
 	position: relative;
 	&__input {
-		width: 80%;
+		min-width: 500px;
 		height: 40px;
 		margin-top: 30px;
 		margin-bottom: 30px;
@@ -93,19 +103,59 @@ body {
 	&__input:focus {
 		box-shadow: 0 0 10px 2px hsl(0, 0%, 87%);
 		cursor: text;
+		border: transparent;
 	}
 	&__magnifyingGlass {
 		position: absolute;
 		top: 43px;
-		left: 70px;
+		left: 30px;
 		opacity: 0.5;
 	}
 	&__btnKeyboard {
 		position: absolute;
-		top: 40px;
-		right: 70px;
-		// &__icon {
-			
-		// }
+		top: 30px;
+		right: 20px;
+		border: transparent;
+		background: transparent;
+		width: 40px;
+		height: 40px;
+		font-size: 1.3rem;
+		cursor: pointer;
+	}
+	&__btns {
+		display: flex;
+		gap: 10px;
+		&__btn {
+			padding: 9px;
+			border: transparent solid 1px;
+			border-radius: 5px;
+			margin-bottom: 30px;
+			background-color: hsla(0, 50%, 94%, 0.621);
+			cursor: pointer;
+		}
+		&__btn:hover {
+			border: 1px solid hsl(0, 0%, 87%);
+			box-shadow: 0 2px 3px -1px hsl(0, 0%, 87%);
+		}
+	}
+}
+.footer {
+	background-color: #f2f2f2;
+
+	&__countryName {
+		font-size: 1rem;
+		padding: 20px;
+		border-bottom: 0.1em solid hsl(0, 1%, 70%);
+		color: hsl(0, 0%, 35%);
+	}
+	&__info {
+		display: flex;
+		justify-content: space-evenly;
+		padding: 20px;
+	}
+	&__link {
+		text-decoration: none;
+		padding: 10px;
+		color: hsl(0, 0%, 35%);
 	}
 }
